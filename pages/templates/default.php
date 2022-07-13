@@ -11,7 +11,7 @@
     <title>Ria's blog</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/bootstrap-3.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap-3.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
   <body>

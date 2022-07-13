@@ -1,9 +1,9 @@
 <?php
-    namespace Modele;
+    namespace App;
 
     /**
      * Class Autoloader
-     * @package Modele
+     * @package App
      */
     class Autoloader {
 

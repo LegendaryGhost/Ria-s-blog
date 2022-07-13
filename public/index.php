@@ -1,8 +1,8 @@
 <?php
 
-use Modele\Autoloader;
+    use App\Autoloader;
 
-    require '../modele/Autoloader.php';
+    require '../App/Autoloader.php';
 
     Autoloader::register();
 
@@ -12,16 +12,13 @@ use Modele\Autoloader;
         $p = 'home';
     }
 
-    //Initialisation des données
-    $db = new Modele\Database('blog');
-    
     ob_start();
     switch($p) {
         case 'home' :
             require '../pages/home.php';
             break;
-        case 'single' :
-            require '../pages/single.php';
+        case 'article' :
+            require '../pages/article.php';
             break;
     }
     $content = ob_get_clean();

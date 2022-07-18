@@ -1,3 +1,6 @@
+<?php
+  use App\App;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Ria's blog</title>
+    <title><?= App::getTitle(); ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap-3.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +22,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="index.php?p=home">Project name</a>
         </div>
       </div>
     </nav>

@@ -20,6 +20,9 @@
         case 'article' :
             require '../pages/article.php';
             break;
+        case 'categorie' :
+            require '../pages/categorie.php';
+            break;
     }
     $content = ob_get_clean();
 

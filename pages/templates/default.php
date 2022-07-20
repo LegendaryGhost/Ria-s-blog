@@ -1,6 +1,3 @@
-<?php
-  use App\App;
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title><?= App::getTitle(); ?></title>
+    <title><?= App::getInstance()->title; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap-3.3.2/dist/css/bootstrap.min.css" rel="stylesheet">

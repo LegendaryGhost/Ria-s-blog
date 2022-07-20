@@ -1,31 +1,29 @@
 <?php
 
-    use App\Autoloader;
+    define('ROOT', dirname(__DIR__));
+    require ROOT . '/app/App.php';
+    App::load();
 
-    require '../App/Autoloader.php';
-
-    Autoloader::register();
-
-    if(isset($_GET['p'])) {
-        $p = $_GET['p'];
+    if(isset($_GET['p'])){
+        extract($_GET);
     } else {
-        $p = 'home';
+        $page = 'home';
     }
 
     ob_start();
-    switch($p) {
+    switch($p){
         case 'home' :
-            require '../pages/home.php';
+            require ROOT . '/pages/posts/home.php';
             break;
-        case 'article' :
-            require '../pages/article.php';
+        case 'posts.show' :
+            require ROOT . '/pages/posts/show.php';
             break;
-        case 'categorie' :
-            require '../pages/categorie.php';
+        case 'posts.category' :
+            require ROOT . '/pages/posts/category.php';
             break;
     }
     $content = ob_get_clean();
 
-    require '../pages/templates/default.php';
+    require ROOT . '/pages/templates/default.php';
 
 ?>
